@@ -74,7 +74,7 @@
         </div>
         <div class="col-9 ps-3">
             <h2>Experiencia</h2>
-            <div *ngFor="let e of experiencias">
+            <div *ngFor="let e of experiencias; let i = index" [style.z-index]="20 - i">
                 <p class="fecha">{{e.duracion}} entre {{e.ano}}</p>
                 <p>{{e.empresa}}</p>
                 <p class="tipo">{{e.tipo}}</p>
@@ -87,7 +87,7 @@
                 </mat-chip-set>
             </div>
             <h2 class="mt-5">Educación</h2>
-            <div *ngFor="let e of formacion">
+            <div *ngFor="let e of formacion; let i = index" [style.z-index]="20 - i">
                 <p class="fecha">{{e.duracion}} {{e.union}} {{e.ano}}</p>
                 <p>{{e.centro}}</p>
                 <p class="tipo">{{e.tipo}}</p>
@@ -100,7 +100,7 @@
                 </mat-chip-set>
             </div>
             <h2 class="mt-5">Proyectos</h2>
-            <div *ngFor="let p of proyectos">
+            <div *ngFor="let p of proyectos; let i = index" [style.z-index]="20 - i">
                 <p class="fecha">{{p.ano}}</p>
                 <h3>{{p.nombre}}</h3>
                 <a href="https://{{p.url}}/" target="_blank">{{p.url}}</a>
@@ -117,7 +117,7 @@
                 </mat-chip-set>
             </div>
             <h2 class="mt-5">Experiencia en sistemas</h2>
-            <div *ngFor="let e of experienciasS">
+            <div *ngFor="let e of experienciasS; let i = index" [style.z-index]="20 - i">
                 <p class="fecha">{{e.duracion}} entre {{e.ano}}</p>
                 <p>{{e.empresa}}</p>
                 <p class="tipo">{{e.tipo}}</p>
