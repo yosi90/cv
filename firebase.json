@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/yosiftware-cv",
+    "public": "public",
     "ignore": [
       "firebase.json",
       "**/.*",
