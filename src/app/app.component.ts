@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
     selector: 'app-root',
@@ -6,6 +6,9 @@ import { Component } from '@angular/core';
     styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
+
+    @ViewChild('base', {static: true}) elemento!: ElementRef;
+
     title = 'yosiftwareCv';
     skills = ['C#', 'Windows Forms', 'Itext7', 'Desarrollo web', 'Angular', 'Firebase', 'Sql server'];
     experiencias = [
@@ -65,4 +68,10 @@ export class AppComponent {
             detalles: ['Creación de personajes', 'Creación de elementos homebrew, desde razas hasta armas y deidades', 'Opción de login con google y microsoft'], url: ''
         }
     ];
+
+    visible = false;
+
+    toggle() {
+        this.visible = !this.visible;
+    }
 }

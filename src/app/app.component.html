@@ -1,6 +1,6 @@
-<div class="container">
+<div #base class="container">
     <div class="row">
-        <div class="col-3">
+        <aside class="col-lg-3 col-8" *ngIf="visible || elemento.nativeElement.offsetWidth > 900">
             <img src="../assets/yo.webp" alt="">
             <h1>Antonio González</h1>
             <h5>Desarrollador en ciernes</h5>
@@ -71,8 +71,8 @@
                     {{s}}
                 </mat-chip>
             </mat-chip-set>
-        </div>
-        <div class="col-9 ps-3">
+        </aside>
+        <main class="col-lg-9 col-12 ps-3" *ngIf="!visible || elemento.nativeElement.offsetWidth > 900">
             <h2>Experiencia</h2>
             <div *ngFor="let e of experiencias; let i = index" [style.z-index]="20 - i">
                 <p class="fecha">{{e.duracion}} entre {{e.ano}}</p>
@@ -133,6 +133,9 @@
                     </mat-chip>
                 </mat-chip-set>
             </div>
-        </div>
+        </main>
+        <button id="abrir" mat-raised-button (click)="toggle()">
+            <mat-icon>360</mat-icon>
+        </button>
     </div>
 </div>

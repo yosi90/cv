@@ -1,9 +1,9 @@
 .container
     padding: 70px 100px 200px 100px
 
-    .col-3
+    aside
         img
-            max-width: 80%
+            max-width: 210px
 
             border-radius: 15px
         
@@ -48,7 +48,7 @@
             &:hover
                 transform: scale(105%)
 
-    .col-9
+    main
         h2
             font-size: 24px
             font-weight: 700
@@ -106,3 +106,33 @@
 
     &:hover
         padding-left: 8px
+
+
+@media (max-width: 991px)
+    .container
+        padding: 70px 2% 200px 1%
+
+        main
+            position: relative
+
+            margin-top: 30px
+
+            z-index: 1
+
+        aside
+            position: absolute
+
+            padding: 30px
+
+            z-index: 2
+
+        #abrir
+            position: absolute
+            top: 25px
+            right: 50px
+
+            display: flex
+            width: auto
+
+            mat-icon
+                margin-left: 8px
