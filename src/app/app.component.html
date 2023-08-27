@@ -1,6 +1,6 @@
 <div #base class="container">
     <div class="row">
-        <aside class="col-lg-3 col-8" *ngIf="visible || elemento.nativeElement.offsetWidth > 900">
+        <aside class="col-lg-3 col-9" *ngIf="visible || elemento.nativeElement.offsetWidth > 900">
             <img src="../assets/yo.webp" alt="">
             <h1>Antonio González</h1>
             <h5>Desarrollador en ciernes</h5>
@@ -55,13 +55,13 @@
             </ul>
             <h3 class="my-2">Lenguajes</h3>
             <ul>
-                <li class="h-ps mb-2">
+                <li class="mb-2">
                     Español (nativo)
                 </li>
-                <li class="h-ps mb-2">
+                <li class="mb-2">
                     Inglés escrito (Avanzado)
                 </li>
-                <li class="h-ps mb-2">
+                <li class="mb-2">
                     Inglés oral (Intermedio)
                 </li>
             </ul>
@@ -134,7 +134,7 @@
                 </mat-chip-set>
             </div>
         </main>
-        <button id="abrir" mat-raised-button (click)="toggle()">
+        <button id="abrir" mat-raised-button (click)="toggle()" [style.position]="visible ? 'fixed' : 'absolute'">
             <mat-icon>360</mat-icon>
         </button>
     </div>
