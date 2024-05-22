@@ -75,7 +75,7 @@
         <main class="col-lg-9 col-12 ps-3" *ngIf="!visible || elemento.nativeElement.offsetWidth > 900">
             <h2>Experiencia</h2>
             <div *ngFor="let e of experiencias; let i = index" [style.z-index]="20 - i">
-                <p class="fecha">{{e.duracion}} entre {{e.ano}}</p>
+                <p class="fecha">{{e.duracion}} {{e.union}} {{e.ano}}</p>
                 <p>{{e.empresa}}</p>
                 <p class="tipo">{{e.tipo}}</p>
                 <h3>{{e.cargo}}</h3>

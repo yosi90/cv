@@ -10,18 +10,23 @@ export class AppComponent {
     @ViewChild('base', {static: true}) elemento!: ElementRef;
 
     title = 'yosiftwareCv';
-    skills = ['C#', 'Windows Forms', 'Itext7', 'Desarrollo web', 'Angular', 'Firebase', 'Sql server'];
+    skills = ['C#', 'Windows Forms', 'Java', 'Spring', 'Itext7', 'Desarrollo web', 'Angular', 'Firebase', 'Sql server'];
     experiencias = [
         {
+            cargo: 'Desarrollador web', tecnologias: ['Angular', 'Java', 'Spring boot', 'JWT', 'Sonar qube', 'TypeScript', 'Sass'], duracion: '2 meses',
+            tipo: 'Prácticas de empresa', empresa: 'Eviden (Atos)', ano: '2024', union: 'en',
+            desc: `Alumno en prácticas realizando un programa intensivo de desarrollo fullstack`
+        },
+        {
             cargo: 'Desarrollador web', tecnologias: ['Odoo', 'Python', 'Qweb', 'Xml', 'Html5', 'css3', 'JavaScript'], duracion: '3 meses',
-            tipo: 'Prácticas de empresa', empresa: 'Bakata solutions', ano: '2022 - 2023', desc: `Alumno en prácticas realizando tareas en Odoo 
-            tales como desarrollar snippets y adaptar código externo a Odoo y hacerlo responsivo`
+            tipo: 'Prácticas de empresa', empresa: 'Bakata solutions', ano: '2022 - 2023', union: 'entre',
+            desc: `Alumno en prácticas realizando tareas en Odoo  tales como desarrollar snippets y adaptar código externo a Odoo y hacerlo responsivo`
         }
     ];
     formacion = [
         {
-            titulo: 'Técnico superior en desarrollo de aplicaciones web', tecnologias: ['Html5', 'Css3', 'C#', 'Sql Server', 'Github', 'Xml', 'DTD y Schema'], 
-            duracion: '2 años', tipo: 'Ciclo superior', centro: 'CIFP Cesar Manrique', ano: '2022 - Actualidad', union: 'entre', nivel: ''
+            titulo: 'Técnico superior en desarrollo de aplicaciones web', tecnologias: ['Html5', 'Css3', 'C#', 'Java', 'Spring', 'Angular', 'Sql Server', 'Github', 'Xml', 'DTD y Schema'], 
+            duracion: '2 años', tipo: 'Ciclo superior', centro: 'CIFP Cesar Manrique', ano: '2022 - 2024', union: 'entre', nivel: ''
         },
         {
             titulo: 'Desarrollo de aplicaciones con tecnologías web', tecnologias: ['Html5', 'Css3', 'JavaScript', 'PHP'], 
@@ -49,6 +54,12 @@ export class AppComponent {
         }
     ];
     proyectos = [
+        {
+            nombre: 'Memoria bibliográfica', estado: 'En desarrollo', ano: '2024 - Actualidad', tecnologias: ['Angular', 'Firebase', 'Spring boot', 'Sql server', 'JWT'],
+            desc: `Una aplicación que busca facilitar la vida de los lectores. En ella podrás ir guardando tu progreso con tus lecturas, manejar tu colección y obtener 
+            estadísticas de lectura.`, detalles: ['Manejo de libros', 'Gestión de capítulos, personajes, conceptos, organizaciones, localizaciones, citas y eventos'], 
+            url: 'libros.yosiftware.es'
+        },
         {
             nombre: 'Fichas 3.5', estado: 'En desarrollo', ano: '2023 - Actualidad', tecnologias: ['Angular', 'Firebase', 'Python', 'Sql server'],
             desc: `Mi hobby es el rol y decidí crear esta aplicación para facilitar la vida a Masters y jugadores, aportándoles una potente solución cargada de vasto 
